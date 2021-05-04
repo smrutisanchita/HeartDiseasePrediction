@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+
+<body>
+<center><h1><font color="black">Heart Disease Prediction</h1></center>
+<h2>     </h2>
+
+<div align="left" style="margin-right: 30%;
+    margin-left: 30%;">
+
+  <form method="POST">
+  <form action="/action_page.php">
+    <label for="Age">Age : </label>
+    <input type="number" id="Age" name="Age" min="00" max="150" required size="35">
+
+    <label for="Sex">Sex :</label>
+    <select name="Sex" id="Sex">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+    </select>
+
+    <label for="ChestPainType">Chest Pain Type :</label>
+    <select name="ChestPainType" id="ChestPainType">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+
+    </select>
+
+    <label for="RestBP"> Rest BP :  </label>
+    <input type="number" id="RestBP" name="RestBP" placeholder="Blood Pressure value between (90-200)" min="70" max="250" step="0.1" required>
+
+    <label for="Cholestrol"> Cholestrol :</label>
+    <input type="number" id="Cholestrol" name="Cholestrol" placeholder="Cholestrol value between (120-600)" min="100" max="600" step="0.1" required>
+
+    <label for="FBS">FBS :</label>
+    <select name="FBS" id="FBS">
+      <option value="0">0</option>
+      <option value="1">1</option>
+
+    </select>
+
+    <label for="RestECG">RestECG :</label>
+    <select name="RestECG" id="RestECG">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+    <label for="MaxHeartRate"> Max Heart Rate :</label>
+    <input type="number" id="MaxHeartRate" name="MaxHeartRate" placeholder="Max Heart Rate value between (70-110)" min="70" max="120" step="0.1" required>
+
+    <label for="ExerAngina">Exer Angina :</label>
+    <select name="ExerAngina" id="ExerAngina">
+      <option value="0">0</option>
+      <option value="1">1</option>
+
+    </select>
+
+    <label for="PrevPeak">Prev Peak :</label>
+    <input type="number" id="PrevPeak" name="PrevPeak" placeholder="Prev Peak value between (0-6.5)" min="0" max="6.5" step="0.1" required>
+
+    <label for="Slope">Slope :</label>
+    <select name="Slope" id="Slope">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+    <label for="NoofMajorVessels">No of Major Vessels :</label>
+    <select name="NoofMajorVessels" id="NoofMajorVessels">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <label for="ThalRate">Thal Rate :</label>
+    <select name="ThalRate" id="ThalRate">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+     <label for="ThalRate">Select Model :</label>
+
+    <select name="model">
+    <option value="KNN">KNN Classifier</option>
+    <option value="DecisionTree">Decision Tree Classifier</option>
+    <option value="RandomForest">Random Forest</option>
+    </select>
+
+
+    <input type="submit" value="Predict">
+  </form>
+</form>
+
+<form method="GET">
+    <center><h2><font color="Black"> The Decision is {{ target}}</h2></center>
+    <center><h2><font color="Black"> {{ sale_making}}</h2></center>
+</form>
+
+
+</div>
+
+
+</body>
+</html>
