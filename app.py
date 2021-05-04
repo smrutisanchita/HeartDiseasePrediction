@@ -14,7 +14,7 @@ with open('Models/Pickle_dtc_Model.pkl', 'rb') as f:
 with open('Models/Pickle_knn_Model.pkl', 'rb') as f:
     KNN = pickle.load(f)
 
-with open('Models/Pickle_rfc_Model.pkl', 'rb') as f:
+with open('Models/Pickle_rfc_model.pkl', 'rb') as f:
     RandomForest = pickle.load(f)
 
 # with open('Models/Pickle_xgbc_Model.pkl', 'rb') as f:
@@ -47,12 +47,12 @@ def get_predictions(Age, Sex, ChestPainType, RestBP,Cholestrol,FBS,RestECG,MaxHe
 app = Flask(__name__)
 
 
-@app.route('/',methods=['GET'])
+@app.route('/')
 def homepage():
     return render_template('home.html')
 
 
-@app.route('/predict', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def my_form_post():
     if request.method == 'POST':
         Age = request.form['Age']
