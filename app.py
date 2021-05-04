@@ -14,7 +14,7 @@ with open('Models/Pickle_dtc_Model.pkl', 'rb') as f:
 with open('Models/Pickle_knn_Model.pkl', 'rb') as f:
     KNN = pickle.load(f)
 
-with open('Models/Pickle_rfc_model.pkl', 'rb') as f:
+with open('Models/Pickle_rfc_Model.pkl', 'rb') as f:
     RandomForest = pickle.load(f)
 
 # with open('Models/Pickle_xgbc_Model.pkl', 'rb') as f:
