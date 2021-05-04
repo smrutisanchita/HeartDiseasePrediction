@@ -54,7 +54,7 @@ div {
       <option value="1">Female</option>
     </select>
 
-    <label for="ChestPainType">Chest Pain Type :</label>
+    <label for="ChestPainType">Chest Pain Type (0 for No Pain, 3 for severe Pain):</label>
     <select name="ChestPainType" id="ChestPainType">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -69,14 +69,14 @@ div {
     <label for="Cholestrol"> Cholestrol :</label>
     <input type="number" id="Cholestrol" name="Cholestrol" placeholder="Cholestrol value between (120-600)" min="100" max="600" step="0.1" required>
 
-    <label for="FBS">FBS :</label>
+    <label for="FBS">FBS 0 for No FSB , 1 for FSB:</label>
     <select name="FBS" id="FBS">
       <option value="0">0</option>
       <option value="1">1</option>
 
     </select>
 
-    <label for="RestECG">RestECG :</label>
+    <label for="RestECG">RestECG 0 for No Rest ECG , 2 for High Rest ECG : </label>
     <select name="RestECG" id="RestECG">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -86,7 +86,7 @@ div {
     <label for="MaxHeartRate"> Max Heart Rate :</label>
     <input type="number" id="MaxHeartRate" name="MaxHeartRate" placeholder="Max Heart Rate value between (70-110)" min="70" max="120" step="0.1" required>
 
-    <label for="ExerAngina">Exer Angina :</label>
+    <label for="ExerAngina">Exer Angina (0 for No Exer Angina, 1 for Exer Angina:</label>
     <select name="ExerAngina" id="ExerAngina">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -96,7 +96,7 @@ div {
     <label for="PrevPeak">Prev Peak :</label>
     <input type="number" id="PrevPeak" name="PrevPeak" placeholder="Prev Peak value between (0-6.5)" min="0" max="6.5" step="0.1" required>
 
-    <label for="Slope">Slope :</label>
+    <label for="Slope">Slope 0 for No Slope, 2 for high Slope :</label>
     <select name="Slope" id="Slope">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -112,7 +112,7 @@ div {
       <option value="4">4</option>
     </select>
 
-    <label for="ThalRate">Thal Rate :</label>
+    <label for="ThalRate">Thal Rate (0 for low Thal rate, 3 for high Thal rate) :</label>
     <select name="ThalRate" id="ThalRate">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -134,8 +134,8 @@ div {
 </form>
 
 <form method="GET">
-  <center><h2><font color="Black"> The Decision is {{ target}}</font>font </h2></center>
-    <center><h2><font color="Black"> {{ sale_making}}</font></h2></center>
+  <center><h2><font color="Black"> The Decision is {{ target}}</font></h2></center>
+    <center><h2><font color="Black"> {{ heart_value}}</font></h2></center>
 </form>
 
 
