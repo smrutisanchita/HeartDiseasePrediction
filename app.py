@@ -47,12 +47,12 @@ def get_predictions(Age, Sex, ChestPainType, RestBP,Cholestrol,FBS,RestECG,MaxHe
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def homepage():
     return render_template('home.html')
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/predict', methods=['POST', 'GET'])
 def my_form_post():
     if request.method == 'POST':
         Age = request.form['Age']
