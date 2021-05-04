@@ -75,11 +75,11 @@ def my_form_post():
         target = get_predictions(Age, Sex, ChestPainType, RestBP,Cholestrol,FBS,RestECG,MaxHeartRate,ExerAngina,PrevPeak,Slope,NoofMajorVessels,ThalRate,model)
 
         if target==1:
-            heart_value = 'Person is likely to have Heart Disease'
+            sale_making = 'Person is likely to have Heart Disease'
         else:
-            heart_value = 'Person is not likely to have heart Disease'
+            sale_making = 'Person is not likely to have heart Disease'
 
-        return render_template('home.html', target = target, sale_making = heart_value)
+        return render_template('home.html', target = target, sale_making = sale_making)
     else:
         return render_template('home.html')
 
